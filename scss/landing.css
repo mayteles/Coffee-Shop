@@ -103,8 +103,13 @@ li {
   left: -8px;
   position: absolute;
 }
-.header__button--active:hover {
-  background-color: #7fd4ea;
+.header__button:hover {
+  cursor: pointer;
+  border: 2px solid #393939;
+  padding: 1rem;
+}
+.header__button--active:hover::before {
+  opacity: 0%;
 }
 .header__img {
   position: absolute;
@@ -116,7 +121,7 @@ li {
 }
 
 /* this section represents the products on the landing page */
-.products__title {
+.products-title {
   text-align: center;
   margin: 60px auto;
 }
@@ -180,7 +185,7 @@ li {
 .btn {
   width: 180px;
   padding: 20px;
-  padding-top: 10px;
+  padding-top: 16px;
   margin: 20px;
   color: #FFF;
   background-color: #5BACC3;
@@ -188,7 +193,9 @@ li {
   position: relative;
 }
 .btn:hover {
-  background-color: #7fd4ea;
+  cursor: pointer;
+  border: 2px solid #393939;
+  padding: 1rem;
 }
 .btn--active::before {
   content: " ";
@@ -198,6 +205,9 @@ li {
   top: -8px;
   left: -8px;
   position: absolute;
+}
+.btn--active:hover::before {
+  opacity: 0%;
 }
 
 /* Icon Size */
@@ -264,27 +274,38 @@ li {
 .decorativecard__overlay {
   position: relative;
   z-index: 2;
-  bottom: 85%;
-  left: 24%;
+  bottom: 80%;
+  left: 35%;
   width: 250px;
 }
 .decorativecard__overlay-img {
-  margin: 20px;
-  padding: 20px;
   height: 280px;
+}
+.decorativecard__overlay-img:hover {
+  animation: rotate 2s linear infinite;
+}
+@keyframes rotate {
+  100% {
+    transform: rotate(360deg);
+  }
 }
 
 .banner {
   display: flex;
   justify-content: center;
-  width: auto;
-  margin: 100px 10px 100px;
+  width: 90%;
+  margin: 100px auto;
+  background-color: #393939;
+  animation: blinker 1.5s linear infinite;
+}
+@keyframes blinker {
+  90% {
+    opacity: 60%;
+    background-color: #5BACC3;
+  }
 }
 .banner__desc {
-  background-color: #393939;
   color: #FFF;
-  text-align: center;
-  width: 90%;
   padding: 20px;
   margin: 20px;
   font-size: 45px;

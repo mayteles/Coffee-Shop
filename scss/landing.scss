@@ -35,8 +35,13 @@
         left: -8px;
         position: absolute;
     }
-    &__button--active:hover {
-        background-color: #7fd4ea;
+    &__button:hover {
+        cursor: pointer;
+        border: 2px solid #393939;
+        padding: 1rem;
+    }
+    &__button--active:hover::before {
+       opacity: 0%;
     }
     &__img {
         position: absolute;
@@ -49,7 +54,7 @@
 }
 
 /* this section represents the products on the landing page */
-.products__title {
+.products-title {
     text-align: center;
     margin: 60px auto;
 }
@@ -110,14 +115,16 @@
 .btn {
     width: 180px;
     padding: 20px;
-    padding-top: 10px;
+    padding-top: 16px;
     margin: 20px;
     color: #FFF;
     background-color: #5BACC3;
     border: none;
     position: relative;
     &:hover {
-        background-color: #7fd4ea;
+        cursor: pointer;
+        border: 2px solid #393939;
+        padding: 1rem;
     }
     &--active::before {
         content: " ";
@@ -127,6 +134,9 @@
         top: -8px;
         left: -8px;
         position: absolute;
+    }
+    &--active:hover::before {
+        opacity: 0%;
     }
 }
 
@@ -170,54 +180,68 @@
     margin: 0;
     width: 450px;
     position: relative;
-    /* offsite border for slyting */
-    &::before {
-    content: " ";
-    border: 5px solid #5BACC3;
-    width: 89%;
-    height: 80%;
-    top: 20px;
-    left: 20px;
-    position: absolute;
-    }
-    &__back-img {
-    width: 400px;
-    padding: 20px;
-    margin: 20px;
-    z-index: 1;
-    }
-    /* this is the overlay image of decorative card */
-    &__overlay{
-    position: relative;
-    z-index: 2; 
-    bottom: 85%;
-    left: 24%;
-    width: 250px;
-    }
-    &__overlay-img {
-    margin: 20px;
-    padding: 20px;
-    height: 280px;
+        /* offsite border for slyting */
+        &::before {
+        content: " ";
+        border: 5px solid #5BACC3;
+        width: 89%;
+        height: 80%;
+        top: 20px;
+        left: 20px;
+        position: absolute;
+        }
+        &__back-img {
+        width: 400px;
+        padding: 20px;
+        margin: 20px;
+        z-index: 1;
+        }
+        /* this is the overlay image of decorative card */
+        &__overlay{
+        position: relative;
+        z-index: 2; 
+        bottom: 80%;
+        left: 35%;
+        width: 250px;
+        }
+        &__overlay-img {
+        // margin: 20px;
+        // padding: 20px;
+        height: 280px;
+        }
+        // keyframe to rotate tilted can img
+        &__overlay-img:hover {
+            animation: rotate 2s linear infinite;
+            @keyframes rotate {
+            100%{transform: rotate(360deg);          
+            }
+        }
     }
 }
 
 .banner {
     display: flex;
     justify-content: center;
-    width: auto;
-    margin: 100px 10px 100px;
+    width: 90%;
+    margin: 100px auto;
+    background-color: #393939;
+    // blink me animation
+    animation: blinker 1.5s linear infinite;
+    @keyframes blinker {
+        90% {
+          opacity: 60%;
+          background-color: #5BACC3;
+        }
+      }
     &__desc {
-        background-color: #393939;
         color: #FFF;
-        text-align: center;
-        width: 90%;
         padding: 20px;
         margin: 20px;
         font-size: 45px;
         font-weight: 400;
     }
 }
-    
+   
 /* bold the text in span tags where is required */
 .bold--ative {
     font-weight: 700;
@@ -250,6 +274,3 @@
         z-index: 2;    
     }
  }
-
- 
- 
