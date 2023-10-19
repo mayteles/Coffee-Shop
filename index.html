@@ -4,50 +4,50 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="./css/landing.css">
-    <link rel="stylesheet" href="./css/global.css">
+    <link rel="stylesheet" href="./scss/landing.css">
+    <!-- <link rel="stylesheet" href="./css/global.css"> -->
     <title>Coffee Shop - Home</title>
 </head>
 <body>
-    <header class="header header-color">
+    <header class="header header__header-color">
         <nav class="navbar">
             <img src="./assets/logos/coffee-beans-logo-and-footer.svg" alt="coffee bean logo" class="navbar__svg">
-            <a href="/MaylonTeles-Coffeeshop2/"><h2 class="navbar__title">nitro</h2></a>
+            <a href="./index.html"><h2 class="navbar__title">nitro</h2></a>
             <ul class="navbar__block">
                 <li class="navbar__block-list"><a href="index.html">About</a></li>
                 <li class="navbar__block-list"><a href="pages/menu.html">Menu</a></li>
-                <li class="navbar__block-list navbar__block-list--ative"><a href="./pages/menu.html">Shop now</a></li>
+                <li class="navbar__block-list"><a class="navbar__block-list--ative" href="./pages/menu.html">Shop now</a></li>
             </ul>    
         </nav>
         <h1 class="header__title">Nitro Coffee</h1>
         <p class="header__description">Coffee is a brewed drink prepared from roasted coffee beans, the seeds of berries from certain Coffea species.</p>
 
-        <button onclick="window.location.href='./pages/menu.html'" class="header__button">SHOP NOW</button> 
+        <button onclick="window.location.href='./pages/menu.html'" class="header__button header__button--active">SHOP NOW</button> 
         <img src="./assets/images/coffeebeans-hero.png" alt="coffe bag" class="header__img">
     </header>
 
     <main>
         <h2 class="products__title">Our Products</h2>
-        <div class="cards">
-            <div class="card">
+        <div class="card">
+            <div class="card__box">
                 <img src="./assets/images/coffeebeans.png" alt="coffee beans" class="card__img">
-                <div class="card__box">
+                <div class="card__subbox">
                     <h3 class="card__title">Coffee Beans</h3>
                     <p class="card__sub-title">Pack of 3</p>
                     <p class="card__price">$19</p>
                 </div>
             </div>
-            <div class="card">
+            <div class="card__box">
                 <img src="./assets/images/coldbrew.png" alt="cold brew" class="card__img">
-                <div class="card__box">
+                <div class="card__subbox">
                     <h3 class="card__title">Cold Brew</h3>
                     <p class="card__sub-title">1 Can</p>
                     <p class="card__price">$5</p>
                 </div>
             </div> 
-            <div class="card">
+            <div class="card__box">
                 <img src="./assets/images/inhousebrew.png" alt="in-house" class="card__img">
-                <div class="card__box">
+                <div class="card__subbox">
                     <h3 class="card__title">In-house Brew</h3>
                     <p class="card__sub-title">1 cup</p>    
                     <p class="card__price">$3</p></div>

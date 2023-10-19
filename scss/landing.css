@@ -1,0 +1,326 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.header__header-color {
+  background-color: #FFF0ED;
+}
+
+body {
+  margin: 0;
+  font-family: "Open Sans";
+}
+
+h1, h2 {
+  font-size: 60px;
+  font-weight: 300;
+}
+
+h3 {
+  font-size: 33px;
+  font-weight: 300;
+}
+
+button, nav .navbar__block-list a {
+  font-size: 21px;
+  font-weight: 400;
+}
+
+p {
+  font-size: 18px;
+  font-weight: 400;
+}
+
+a {
+  text-decoration: none;
+}
+
+li {
+  list-style-type: none;
+}
+
+.navbar {
+  display: flex;
+  padding-bottom: 20px;
+  background-color: #FFF0ED;
+}
+.navbar__svg {
+  width: 50px;
+  margin-left: 30px;
+}
+.navbar__title {
+  margin: 0;
+  font-size: 60px;
+  font-weight: 300;
+}
+.navbar__block {
+  display: flex;
+  padding-top: 20px;
+  list-style: none;
+  justify-content: right;
+  width: 100%;
+}
+.navbar__block-list {
+  padding: 20px 20px 0px;
+}
+.navbar__block-list--ative {
+  color: #5BACC3;
+}
+
+.header {
+  height: 770px;
+}
+.header__title {
+  margin: 10% 0 0;
+  width: 21%;
+  position: relative;
+  left: 10%;
+}
+.header__description {
+  width: 20%;
+  position: relative;
+  padding-bottom: 30px;
+  left: 10%;
+}
+.header__button {
+  border: #5BACC3;
+  width: 11.25rem;
+  padding: 1.25rem;
+  padding-top: 10px;
+  background-color: #5BACC3;
+  color: #FFF;
+  position: relative;
+  left: 10.5%;
+  z-index: 2;
+}
+.header__button::before {
+  content: " ";
+  border: 2px solid #393939;
+  width: 100%;
+  height: 100%;
+  top: -8px;
+  left: -8px;
+  position: absolute;
+}
+.header__button--active:hover {
+  background-color: #7fd4ea;
+}
+.header__img {
+  position: absolute;
+  bottom: 330px;
+  left: 65%;
+  height: 580px;
+  z-index: 2;
+  top: 15%;
+}
+
+/* this section represents the products on the landing page */
+.products__title {
+  text-align: center;
+  margin: 60px auto;
+}
+
+.card {
+  display: flex;
+  justify-content: center;
+  -moz-column-gap: 80px;
+       column-gap: 80px;
+}
+.card__box {
+  justify-content: space-evenly;
+  width: 330px;
+  height: 440px;
+  box-shadow: 0 5px 9px -1px rgba(0, 0, 0, 0.25);
+  border-radius: 10px;
+}
+.card__img {
+  width: 10.625rem;
+  height: 17.5rem;
+  display: block;
+  margin: 20px auto 0 auto;
+  padding: 20px;
+}
+.card__subbox {
+  border-radius: 0 0 10px 10px;
+  box-sizing: border-box;
+  background-color: #fff0ed;
+  height: 100px;
+  padding: 20px 1px;
+}
+.card__title {
+  margin: 0 0 0 10px;
+  width: -moz-fit-content;
+  width: fit-content;
+  height: 40px;
+}
+.card__sub-title {
+  width: -moz-fit-content;
+  width: fit-content;
+  color: #909090;
+  font-size: 15px;
+  margin: 0 0 0 10px;
+}
+.card__price {
+  margin: 0;
+  width: 50px;
+  margin: 0;
+  color: #5BACC3;
+  position: relative;
+  left: 87%;
+  bottom: 70%;
+}
+
+/* button under the card section to view all products */
+#btn-box-view-all {
+  margin: 60px;
+  text-align: center;
+}
+
+.btn {
+  width: 180px;
+  padding: 20px;
+  padding-top: 10px;
+  margin: 20px;
+  color: #FFF;
+  background-color: #5BACC3;
+  border: none;
+  position: relative;
+}
+.btn:hover {
+  background-color: #7fd4ea;
+}
+.btn--active::before {
+  content: " ";
+  border: 2px solid #393939;
+  width: 100%;
+  height: 100%;
+  top: -8px;
+  left: -8px;
+  position: absolute;
+}
+
+/* Icon Size */
+.icon-size {
+  width: 50px;
+}
+
+/* box card to lay content side by side refering to cold brew card */
+.box-card {
+  display: flex;
+  width: 100%;
+  height: 500px;
+  justify-content: center;
+  -moz-column-gap: 30px;
+       column-gap: 30px;
+}
+
+/* Article name coldBrewCard dimensional porpose*/
+.coldBrewCard {
+  width: 560px;
+  padding: 50px;
+  margin: 0 6% 0 2%;
+  /* icon placement inside article and figure tag tag */
+}
+.coldBrewCard__title {
+  margin: 47px 0 4px;
+}
+.coldBrewCard__description {
+  margin-top: 0;
+}
+.coldBrewCard__fig {
+  width: 540px;
+  margin: 0 10px 10px 0;
+  display: flex;
+  justify-content: space-between;
+}
+.coldBrewCard__btn {
+  margin-left: 0;
+}
+
+/* aside img for cold brew card under article tag */
+.decorativecard {
+  margin: 0;
+  width: 450px;
+  position: relative;
+  /* offsite border for slyting */
+  /* this is the overlay image of decorative card */
+}
+.decorativecard::before {
+  content: " ";
+  border: 5px solid #5BACC3;
+  width: 89%;
+  height: 80%;
+  top: 20px;
+  left: 20px;
+  position: absolute;
+}
+.decorativecard__back-img {
+  width: 400px;
+  padding: 20px;
+  margin: 20px;
+  z-index: 1;
+}
+.decorativecard__overlay {
+  position: relative;
+  z-index: 2;
+  bottom: 85%;
+  left: 24%;
+  width: 250px;
+}
+.decorativecard__overlay-img {
+  margin: 20px;
+  padding: 20px;
+  height: 280px;
+}
+
+.banner {
+  display: flex;
+  justify-content: center;
+  width: auto;
+  margin: 100px 10px 100px;
+}
+.banner__desc {
+  background-color: #393939;
+  color: #FFF;
+  text-align: center;
+  width: 90%;
+  padding: 20px;
+  margin: 20px;
+  font-size: 45px;
+  font-weight: 400;
+}
+
+/* bold the text in span tags where is required */
+.bold--ative {
+  font-weight: 700;
+}
+
+/* footer section */
+.footer {
+  display: flex;
+  justify-content: space-evenly;
+  background-color: #fff0ed;
+  height: 110px;
+  padding: 50px;
+  z-index: 1;
+}
+.footer__img {
+  width: 50px;
+}
+.footer__svg {
+  width: 120px;
+  opacity: 25%;
+  position: relative;
+  right: 13.5%;
+  bottom: 35%;
+  z-index: 2;
+}
+.footer__svg1 {
+  width: 120px;
+  opacity: 25%;
+  position: relative;
+  left: 13.5%;
+  top: 30%;
+  z-index: 2;
+}/*# sourceMappingURL=landing.css.map */

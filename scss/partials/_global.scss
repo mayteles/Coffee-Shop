@@ -1,0 +1,37 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+.header__header-color {
+    background-color: #FFF0ED;
+}
+
+body {
+    margin: 0;
+    font-family: 'Open Sans';
+}
+
+h1, h2 {
+    font-size: 60px;
+    font-weight: 300;
+}
+h3 {
+    font-size: 33px;
+    font-weight: 300;
+}
+button, nav .navbar__block-list a {
+    font-size: 21px;
+    font-weight: 400;
+}
+
+p {
+    font-size: 18px;
+    font-weight: 400;
+}
+
+a {
+    text-decoration: none;
+}
+li {
+    list-style-type: none;
+}
